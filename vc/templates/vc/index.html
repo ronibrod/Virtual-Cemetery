@@ -1,0 +1,42 @@
+{% extends "vc/layout.html" %}
+
+
+{% block index %}
+    <header class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 logo">
+                    <a href="{% url 'vc:home_page' %}">
+                        <img class="logo_image" src="https://publicdomainvectors.org/tn_img/smiling-skull-silhouette-fr.webp" alt="logo_image">
+                    </a>
+                    <h2 class="logo_text">DeathFace</h2>
+                </div>
+
+                <div class="col-6">
+                    {% block top_search %}{% endblock %}
+                </div>
+                <div class="col-3 menu text-start mt-auto mb-3">
+                    {% block menu %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <div class="side_and_main">
+            <div class="row">
+                <div class="col-lg-2 bg-light side">
+                    <nav class="side_navbar flex-column container ">
+                        <a class="nav-link" href="{% url 'vc:add' %}">יצירת ערך חדש</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link disabled" href="#">לא ניתן ללחיצה</a>
+                    </nav>
+                </div>
+                <div class="col col-xl-8">
+                    {% block main %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock %}

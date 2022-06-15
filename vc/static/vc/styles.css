@@ -1,0 +1,43 @@
+
+/*header > div {
+    border: 1px solid black;
+}*/
+
+main > div {
+    min-height: 550px
+}
+
+footer > div {
+    min-height: 100px
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.logo_image {
+    height: 7vh;
+    width: 14vw;
+    object-fit: contain;
+}
+
+.side {
+    min-height: 550px;
+    min-width: 200px;
+}
+
+.side_navbar a {
+    background-color: #cecece;
+}
+
+.title {
+    min-height: 200px;
+}
+
+.person {
+    border: 1px solid black;
+    height: 280px;
+}

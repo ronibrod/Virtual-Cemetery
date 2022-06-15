@@ -1,0 +1,30 @@
+{% extends "vc/index.html" %}
+
+{% block title %}
+    {{ person_name }}
+{% endblock %}
+
+{% block top_search %}
+    <div class="center">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control" type="search" aria-label="Search">
+            <button class="btn btn-outline-success my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <div class="bg-info">
+            <h1 id="title_text">{{ Entry.name }}</h1>
+        </div>
+        <div class="entry">
+            <div class="">
+                <p class="main_text"><!--<img src="{{ Entry.image }}" alt="{{ Entry.name }}" class="pic">-->
+                    <img class="logo_image" src="https://publicdomainvectors.org/tn_img/smiling-skull-silhouette-fr.webp" alt="logo_image" style="float: left;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem inventore maiores quibusdam? Accusamus alias aliquid, atque aut autem corporis cumque dolorum eaque eius eos eum excepturi labore, laudantium magnam natus nesciunt, optio perferendis quae saepe sequi tempore ullam veritatis? Dignissimos et exercitationem facere, illo inventore numquam pariatur sint. Ab adipisci alias aliquid aperiam assumenda blanditiis consequatur culpa, cupiditate debitis dignissimos distinctio dolorem eaque eligendi error est et eum, ipsa ipsum iste itaque minima minus optio perferendis placeat quia quibusdam quo rem repellendus reprehenderit repudiandae saepe sequi, unde ut veritatis vero voluptatem voluptates! A at blanditiis, eius expedita iste labore obcaecati!
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "vc/index.html" %}
+
+{% block title %}
+    add
+{% endblock %}
+
+{% block main %}
+    <div class="main">
+        <form class="row g-3" action="{% url 'vc:add' %}" method="post">
+          {% csrf_token %}
+          <div class="col-md-4">
+            <label for="first_name" class="form-label">שם פרטי</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" class="form-label" value="{{ first_name }}" required>
+          </div>
+          <div class="col-md-4">
+            <label for="last_name" class="form-label">שם משפחה</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" required>
+          </div>
+          <div class="col-md-4">
+            <label for="date_of_birth" class="form-label">תאריך לידה</label>
+            <input type="text" class="form-control" id="date_of_birth" name="date_of_birth">
+          </div>
+          <div class="col-md-4">
+            <label for="date_of_death" class="form-label">תאריך פטירה</label>
+            <input type="text" class="form-control" id="date_of_death" name="date_of_death">
+          </div>
+          <div class="col-mb-4">
+            <label for="image" class="form-label">תמונה</label>
+            <input class="form-control" type="file" id="image" name="image">
+          </div>
+          <div class="">
+            <label for="text_area">סיפור חייו</label>
+            <textarea class="form-control" id="text_area" name="body" style="height: 300px"></textarea>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">שלח</button>
+          </div>
+        </form>
+    </div>
+{% endblock %}
